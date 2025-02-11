@@ -15,14 +15,14 @@
 
   <div class="crearFicha">
     <input type="text" placeholder="Nombre" [(ngModel)]="datonombre">
-    <input type="text" placeholder="consulta" [(ngModel)]="datoconsulta">
+    <input type="text"  placeholder="consulta" [(ngModel)]="datoconsulta" #aloneN><!--  para que haga referencia sin entrar al Dom, lo llamo en el ts -->
     <input type="date">
-    <input type="button">
+    <input type="button" value="Ver" (click)="verFicha()">
   </div>
   
   <app-datos [nombre]="datonombre" [consulta]="datoconsulta"></app-datos>
 
-<app-ficha></app-ficha>
+  <app-ficha *ngIf="mostrarFicha" [nombre]="datonombre" [consulta]="datoconsulta"></app-ficha>
 </body>
 </html>
 

@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class DatosComponent {
   @Input() nombre:string="";
-  @Input() consulta:string="";
+  @Input() consulta=0;
   @Input() fecha:string="";
 }
 

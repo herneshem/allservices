@@ -4,6 +4,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ServiciopticaService {
-
+  public alldatos: any[] = [];
+  public consulta: number=0
   constructor() { }
+
+  obDatos():  any []{
+    return this.alldatos;
+    
+  }
+
+  obConsulta(){
+    return this.consulta
+    
+  }
 }
