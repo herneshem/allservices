@@ -4,14 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Ficha cliente</title>
 </head>
 <body>
   <div class="banner">
     <div class="imagen"> <img src="/images/ojologo.png" alt="ojo"></div>
-    <div class="texto">texto logo</div>
-    <div class="hora">hora</div>
+    <div class="texto">Consultas</div>
+    <div class="hora">
+      <img src="/images/clock.png" alt="reloj" class="icono-reloj">
+      <span #horaActual></span>
+    </div>
   </div>
+
+
+<button (click)="cambiarIdioma('en')">English</button>
+<button (click)="cambiarIdioma('es')">Español</button>
 
   <div class="crearFicha">
     <input type="text" placeholder="Nombre" [(ngModel)]="datonombre">

@@ -2,11 +2,13 @@ import { Component, Input } from '@angular/core';
 import { ServiciopticaService } from '../servicioptica.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ResultadosComponent } from '../resultados/resultados.component';
+
 
 @Component({
   selector: 'app-ficha',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ResultadosComponent],
   templateUrl: './ficha.component.html',
   styleUrl: './ficha.component.less'
 })

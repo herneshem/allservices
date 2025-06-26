@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,12 @@ import { Injectable } from '@angular/core';
 export class ServiciopticaService {
   public alldatos: any[] = [];
   public consulta: number=0
-  constructor() { }
+
+  constructor(private translate: TranslateService) { 
+     this.translate.setDefaultLang('es');
+   
+    this.translate.use('es');
+  }
 
   obDatos():  any []{
     return this.alldatos;
